@@ -7,9 +7,8 @@ end
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 lsp_installer.on_server_ready(function(server)
 	local opts = {
-		autostart = false,
 		on_attach = require("lsp.handlers").on_attach,
-		capabilities = require("lsp.handlers").capabilities,
+		capabilities = require("lsp.handlers").capabilities
 	}
 
 	 if server.name == "jsonls" then

@@ -23,6 +23,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'williamboman/nvim-lsp-installer'
     Plug 'neovim/nvim-lspconfig'
     "Auto complete
+    
     Plug 'hrsh7th/nvim-cmp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-path'
@@ -31,7 +32,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-nvim-lua'
     " Snippets
+    "Plug 'dcampos/nvim-snippy'
+    "Plug 'dcampos/cmp-snippy'
     Plug 'L3MON4D3/LuaSnip'
+    Plug 'rafamadriz/friendly-snippets'
     " other Stuff
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'

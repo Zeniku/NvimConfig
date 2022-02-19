@@ -43,5 +43,8 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
-nnoremap nn :NERDTreeToggle<CR>
+nnoremap nt :NERDTreeToggle<CR>
 nnoremap <C-t> :source $HOME/.config/nvim/init.vim<CR>
+
+nnoremap "+p :r !termux-clipboard-get<CR>
+nnoremap "+y !termux-clipboard-set<CR>
