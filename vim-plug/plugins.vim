@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-airline/vim-airline'
     Plug 'lunarvim/darkplus.nvim'
+    Plug 'vim-airline/vim-airline-themes'
     " Lsp
     Plug 'williamboman/nvim-lsp-installer'
     Plug 'neovim/nvim-lspconfig'
