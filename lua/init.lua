@@ -1,0 +1,5 @@
+require('options')
+require("keymaps")
+require("lsp")
+require('plug-config.cmp')
+require("colorscheme")
