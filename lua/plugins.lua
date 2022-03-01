@@ -50,7 +50,6 @@ return packer.startup(function(use)
   use "jiangmiao/auto-pairs"
   -- Ui stuff
   use "ryanoasis/vim-devicons"
-  use "vim-airline/vim-airline"
   use "lunarvim/darkplus.nvim"
   use "vim-airline/vim-airline-themes"
   -- Lsp
@@ -69,8 +68,11 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
 
+  use "kyazdani42/nvim-web-devicons"
+
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+  use 'nvim-lualine/lualine.nvim'
 
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
