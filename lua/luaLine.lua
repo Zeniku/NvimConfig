@@ -31,31 +31,43 @@ local mode = {
 	end,
 }
 
-local filetype = {
-	"filetype",
-	icons_enabled = true,
-}
-
 local branch = {
 	"branch",
 	icons_enabled = true,
 	icon = "",
 }
 
-local location = {
-	"location",
-	padding = 1,
+local filename = {
+	"Ifilename", -- custom componenet
+	colored = true,
+	file_status = true,      -- Displays file status (readonly status, modified status)
+	path = 0,
+	shorting_target = 40, 
+	symbols = {
+		modified = ' ',      -- Text to show when the file is modified.
+		readonly = ' ',      -- Text to show when the file is non-modifiable or readonly.
+		unnamed = '[UnNamed]', -- Text to show for unnamed buffers.
+	},
 }
+
+-- combime filename and filetype which is bad code 
 
 -- cool function for progress
 local progress = function()
 	local current_line = vim.fn.line(".")
 	local total_lines = vim.fn.line("$")
-	local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
+	local chars = { "_", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" }
 	local line_ratio = current_line / total_lines
 	local index = math.ceil(line_ratio * #chars)
 	return chars[index]
 end
+
+local location = {
+	"location",
+	fmt = function(str)
+		return str .. " " .. progress()
+	end
+}
 
 local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
@@ -72,12 +84,12 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { mode },
-		lualine_b = { branch, diagnostics, "filename" },
-		lualine_c = {},
+		lualine_b = { branch, diagnostics },
+		lualine_c = { filename },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-	  lualine_x = { diff, spaces, "encoding", filetype },
+	  lualine_x = { diff, "encoding" },
 		lualine_y = { location },
-		lualine_z = { progress },
+		lualine_z = {},
 	},
 	inactive_sections = {
 		lualine_a = {},
