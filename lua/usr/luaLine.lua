@@ -20,7 +20,7 @@ local diagnostics = {
 local diff = {
 	"diff",
 	colored = true,
-	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
+	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
   cond = hide_in_width
 }
 
@@ -38,14 +38,14 @@ local branch = {
 }
 
 local filename = {
-	"Ifilename", -- custom componenet
+	"Ifilename", -- custom component 
 	colored = true,
 	file_status = true,      -- Displays file status (readonly status, modified status)
 	path = 0,
 	shorting_target = 40, 
 	symbols = {
-		modified = ' ',      -- Text to show when the file is modified.
-		readonly = ' ',      -- Text to show when the file is non-modifiable or readonly.
+		modified = ' ',      -- Text to show when the file is modified.
+		readonly = ' ',      -- Text to show when the file is non-modifiable or readonly.
 		unnamed = '[UnNamed]', -- Text to show for unnamed buffers.
 	},
 }
@@ -84,12 +84,12 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { mode },
-		lualine_b = { branch, diagnostics },
+		lualine_b = { diagnostics },
 		lualine_c = { filename },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 	  lualine_x = { diff, "encoding" },
 		lualine_y = { location },
-		lualine_z = {},
+		lualine_z = { branch },
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -99,6 +99,10 @@ lualine.setup({
 		lualine_y = {},
 		lualine_z = {},
 	},
-	tabline = {},
-	extensions = {},
+	tabline = {
+	
+	},
+	extensions = {
+
+	},
 })
