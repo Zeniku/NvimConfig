@@ -44,8 +44,10 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
   use "sheerun/vim-polyglot"
-    -- File Explorer
-  use "scrooloose/NERDTree"
+  -- File Explorer
+  use 'kyazdani42/nvim-tree.lua'
+  use "nvim-telescope/telescope.nvim"
+  use 'nvim-telescope/telescope-media-files.nvim'
   -- Auto pairs for "(" "[" "{"
   use "jiangmiao/auto-pairs"
   -- Ui stuff
@@ -69,9 +71,6 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets"
 
   use "kyazdani42/nvim-web-devicons"
-
-  use "nvim-telescope/telescope.nvim"
-  use 'nvim-telescope/telescope-media-files.nvim'
 
   use 'akinsho/bufferline.nvim'
   use 'nvim-lualine/lualine.nvim'
