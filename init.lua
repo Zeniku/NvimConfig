@@ -7,7 +7,7 @@ vim.cmd [[
 ]]
 
 vim.cmd [[
-  autocmd BufWritePost * ':silent! !git add %'
+  autocmd BufWritePost * silent !git add %
 ]]
 
 require("usr.options")
