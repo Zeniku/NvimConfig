@@ -12,6 +12,7 @@ Requires [Neovim v0.6.0](https://github.com/neovim/neovim/releases/tag/v0.6.0) o
 
 ## Get Healthy
 <details>
+<summary></summary>
 Open `nvim` and enter the command:
 
 ```
@@ -37,9 +38,7 @@ First we'll fix copy/paste
   ```
 - On Termux
 
-  you need to install Termux:API in F-Droid
-
-  then run
+  you need to install Termux:API in F-Droid and run
   ```
   pkg install termux-api
   ```
@@ -59,7 +58,5 @@ Next we need to install python support (node is optional)
   ```
 ---
 
-***Note:***this was copy pasted from [Neovim From Scratch](https://github.com/LunarVim/Neovim-from-scratch)
-
-with Termux added in
-</details>
+**Note:**this was copy pasted from [Neovim From Scratch](https://github.com/LunarVim/Neovim-from-scratch)<br />
+with Termux added in</details>
