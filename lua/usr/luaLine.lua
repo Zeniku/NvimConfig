@@ -53,6 +53,7 @@ local filename = {
 -- combime filename and filetype which is bad code 
 
 -- cool function for progress
+-- stolen :c 
 local progress = function()
 	local current_line = vim.fn.line(".")
 	local total_lines = vim.fn.line("$")
