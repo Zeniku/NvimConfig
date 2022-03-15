@@ -42,24 +42,29 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
-
   use "sheerun/vim-polyglot"
+
   -- File Explorer
   use 'kyazdani42/nvim-tree.lua'
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+
   -- Auto pairs for "(" "[" "{"
   use "jiangmiao/auto-pairs"
+
   -- Ui stuff
   use "kyazdani42/nvim-web-devicons"
   use "ryanoasis/vim-devicons"
   use "lunarvim/darkplus.nvim"
-  use 'navarasu/onedark.nvim'
+  use 'navarasu/onedark.nvim' 
+  use 'akinsho/bufferline.nvim'
+  use 'nvim-lualine/lualine.nvim'
+
   -- Lsp
   use "williamboman/nvim-lsp-installer"
   use "neovim/nvim-lspconfig"
+
   --Auto complete
-  
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
@@ -67,12 +72,10 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+
   -- Snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
-
-  use 'akinsho/bufferline.nvim'
-  use 'nvim-lualine/lualine.nvim'
 
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
