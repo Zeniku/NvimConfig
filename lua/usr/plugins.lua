@@ -51,9 +51,10 @@ return packer.startup(function(use)
   -- Auto pairs for "(" "[" "{"
   use "jiangmiao/auto-pairs"
   -- Ui stuff
+  use "kyazdani42/nvim-web-devicons"
   use "ryanoasis/vim-devicons"
   use "lunarvim/darkplus.nvim"
-  use "vim-airline/vim-airline-themes"
+  use 'navarasu/onedark.nvim'
   -- Lsp
   use "williamboman/nvim-lsp-installer"
   use "neovim/nvim-lspconfig"
@@ -69,8 +70,6 @@ return packer.startup(function(use)
   -- Snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
-
-  use "kyazdani42/nvim-web-devicons"
 
   use 'akinsho/bufferline.nvim'
   use 'nvim-lualine/lualine.nvim'
