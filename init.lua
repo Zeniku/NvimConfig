@@ -1,4 +1,3 @@
-
 vim.cmd [[
   augroup init
     autocmd!
@@ -10,12 +9,18 @@ vim.cmd [[
   autocmd BufWritePost * silent !git add %
 ]]
 
-require("usr.options")
-require("usr.keymaps")
-require("usr.plugins")
-require("usr.lsp")
-require("usr.Cmp")
-require("usr.nvimtree")
-require("usr.onedark")
-require("usr.bufferline")
-require("usr.luaLine")
+local usr = {
+  "options",
+  "keymaps",
+  "plugins",
+  "cmp",
+  "lsp",
+  "nvimtree",
+  "onedark",
+  "bufferline",
+  "luaLine"
+}
+
+for i, v in pairs(usr) do
+  require("usr." .. v)
+end
