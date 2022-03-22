@@ -24,13 +24,6 @@ local diff = {
   cond = hide_in_width
 }
 
-local mode = {
-	"mode",
-	fmt = function(str)
-		return str
-	end,
-}
-
 local branch = {
 	"branch",
 	icons_enabled = true,
@@ -51,9 +44,9 @@ local filename = {
 }
 
 -- combime filename and filetype which is bad code 
-
--- cool function for progress
+-- cool function for progress 
 -- stolen :c 
+
 local progress = function()
 	local current_line = vim.fn.line(".")
 	local total_lines = vim.fn.line("$")
@@ -70,10 +63,6 @@ local location = {
 	end
 }
 
-local spaces = function()
-	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
-end
-
 lualine.setup({
 	options = {
 		icons_enabled = true,
@@ -84,7 +73,7 @@ lualine.setup({
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { mode },
+		lualine_a = { "mode" },
 		lualine_b = { diagnostics },
 		lualine_c = { filename },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },

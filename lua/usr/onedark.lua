@@ -22,7 +22,7 @@ onedark.setup  {
     keywords = 'bold',
     functions = 'none',
     strings = 'none',
-    variables = 'none'
+    variables = 'bold'
   },
 
   -- Custom Highlights --

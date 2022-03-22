@@ -18,7 +18,8 @@ local usr = {
   "nvimtree",
   "onedark",
   "bufferline",
-  "luaLine"
+  "luaLine",
+  "colorizer"
 }
 
 for i, v in pairs(usr) do
