@@ -20,7 +20,6 @@ local usr = {
   "bufferline",
   "luaLine",
   "colorizer",
-  "treesitter"
 }
 
 for i, v in pairs(usr) do
