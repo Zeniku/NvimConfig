@@ -31,19 +31,18 @@ local branch = {
 }
 
 local filename = {
-	"Ifilename", -- custom component 
+	"Ifilename", -- custom component combime filename and filetype which is bad code 
 	colored = true,
-	file_status = true,      -- Displays file status (readonly status, modified status)
+	file_status = true,
 	path = 0,
-	shorting_target = 40, 
+	shorting_target = 40,
 	symbols = {
-		modified = ' ',      -- Text to show when the file is modified.
-		readonly = ' ',      -- Text to show when the file is non-modifiable or readonly.
-		unnamed = '[UnNamed]', -- Text to show for unnamed buffers.
+		modified = ' ',
+		readonly = ' ',
+		unnamed = '[UnNamed]',
 	},
 }
 
--- combime filename and filetype which is bad code 
 -- cool function for progress 
 -- stolen :c 
 

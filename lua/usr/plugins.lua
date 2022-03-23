@@ -56,8 +56,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "ryanoasis/vim-devicons"
   use "lunarvim/darkplus.nvim"
-  use 'navarasu/onedark.nvim'
-  use 'norcalli/nvim-colorizer.lua'
+  use 'navarasu/onedark.nvim' 
   use 'akinsho/bufferline.nvim'
   use 'nvim-lualine/lualine.nvim'
 
@@ -73,6 +72,11 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
 
   -- Snippets
   use "L3MON4D3/LuaSnip"

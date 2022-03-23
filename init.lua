@@ -19,7 +19,8 @@ local usr = {
   "onedark",
   "bufferline",
   "luaLine",
-  "colorizer"
+  "colorizer",
+  "treesitter"
 }
 
 for i, v in pairs(usr) do
