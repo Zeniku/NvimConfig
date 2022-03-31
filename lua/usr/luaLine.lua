@@ -7,6 +7,11 @@ local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
 
+local nolsp = function()
+  local clients = vim.lsp.get_active_clients()
+	return not next(clients) == nil
+end
+
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
@@ -15,6 +20,7 @@ local diagnostics = {
 	colored = true,
 	update_in_insert = false,
 	always_visible = true,
+	cond = nolsp
 }
 
 local diff = {
@@ -62,6 +68,26 @@ local location = {
 	end
 }
 
+local lspcl = {
+	function()
+    local msg = 'Not Active'
+    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+    local clients = vim.lsp.get_active_clients()
+    if next(clients) == nil then
+      return msg
+    end
+    for _, client in ipairs(clients) do
+      local filetypes = client.config.filetypes
+      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+        return client.name
+      end
+    end
+    return msg
+  end,
+  icon = ' LSP:',
+  color = { fg = '#dfdfdf', gui = 'bold' },
+}
+
 lualine.setup({
 	options = {
 		icons_enabled = true,
@@ -74,7 +100,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { diagnostics },
-		lualine_c = { filename },
+		lualine_c = { filename , lspcl },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 	  lualine_x = { diff, "encoding" },
 		lualine_y = { location },

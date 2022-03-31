@@ -60,6 +60,7 @@ return packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'akinsho/bufferline.nvim'
   use 'nvim-lualine/lualine.nvim'
+  use 'uiiaoo/java-syntax.vim'
 
   -- Lsp
   use "williamboman/nvim-lsp-installer"
