@@ -4,7 +4,7 @@ table.insert(runtime_path, "lua/?/init.lua")
 
 local M = {
   settings = {
-    cmd = { "lua-language-server" }
+    cmd = { "lua-language-server" },
     Lua = {
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)

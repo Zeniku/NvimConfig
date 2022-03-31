@@ -30,7 +30,7 @@ function M:update_status()
     end
   end
 
-	return msg .. " " .. M.super.update_status(self)
+	return msg .. " " .. M.super.update_status(self) -- color is not accounted
 end
 
 return M

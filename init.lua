@@ -22,6 +22,6 @@ local usr = {
   "colorizer",
 }
 
-for i, v in pairs(usr) do
+for _, v in pairs(usr) do
   require("usr." .. v)
 end
