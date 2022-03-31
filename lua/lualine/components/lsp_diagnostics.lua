@@ -1,8 +1,7 @@
-local status_ok, lualine = pcall(require, "lualine")
+local status_ok, _ = pcall(require, "lualine")
 if not status_ok then
 	return
 end
-
 local M = require('lualine.components.diagnostics'):extend()
 
 -- From evil line example i think
