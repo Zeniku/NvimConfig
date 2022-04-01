@@ -9,7 +9,7 @@ end
 
 local nolsp = function()
   local clients = vim.lsp.get_active_clients()
-	return not next(clients) == nil
+	return not (next(clients) == nil)
 end
 
 local diagnostics = {
