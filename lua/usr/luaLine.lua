@@ -7,20 +7,13 @@ local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
 
-local nolsp = function()
-  local clients = vim.lsp.get_active_clients()
-	return not (next(clients) == nil)
-end
-
-local diagnostics = {
-	"diagnostics",
+local lsp_diagnostics = {
+	"lsp_diagnostics", -- custom component evil line lsp client + lualine diagnostics
 	sources = { "nvim_diagnostic" },
 	sections = { "error", "warn" },
 	symbols = { error = " ", warn = " " },
 	colored = true,
-	update_in_insert = false,
-	always_visible = true,
-	cond = nolsp
+	update_in_insert = true
 }
 
 local diff = {
@@ -41,17 +34,16 @@ local filename = {
 	colored = true,
 	file_status = true,
 	path = 0,
-	shorting_target = 40,
+	shorting_target = 30,
 	symbols = {
 		modified = ' ',
 		readonly = ' ',
-		unnamed = '[UnNamed]',
+		unnamed = '[NoName]',
 	},
 }
 
 -- cool function for progress 
 -- stolen :c 
-
 local progress = function()
 	local current_line = vim.fn.line(".")
 	local total_lines = vim.fn.line("$")
@@ -68,25 +60,6 @@ local location = {
 	end
 }
 
-local lspcl = {
-	function()
-    local msg = 'Not Active'
-    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-    local clients = vim.lsp.get_active_clients()
-    if next(clients) == nil then
-      return msg
-    end
-    for _, client in ipairs(clients) do
-      local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name
-      end
-    end
-    return msg
-  end,
-  icon = ' LSP:',
-  color = { fg = '#dfdfdf', gui = 'bold' },
-}
 
 lualine.setup({
 	options = {
@@ -99,10 +72,10 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = { diagnostics },
-		lualine_c = { filename , lspcl },
-		-- lualine_x = { "encoding", "fileformat", "filetype" },
-	  lualine_x = { diff, "encoding" },
+		lualine_b = { lsp_diagnostics },
+		lualine_c = { filename },
+		-- lualine_x = { diff, "encoding"},
+	  lualine_x = { diff },
 		lualine_y = { location },
 		lualine_z = { branch },
 	},
