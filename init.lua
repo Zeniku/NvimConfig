@@ -19,7 +19,7 @@ local usr = {
   "bufferline",
   "luaLine",
   "colorizer",
-  "rainbow",
+  "luant",
   "autocommands",
 }
 

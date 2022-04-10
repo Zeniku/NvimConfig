@@ -1,3 +1,5 @@
+-- file for not lua
+
 vim.g.rainbow_active = false
 vim.cmd [[
   let g:rainbow_conf = {
@@ -5,4 +7,10 @@ vim.cmd [[
   \ 'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
   \ 'guis': ['bold', 'bold', 'bold', 'bold', 'bold'],
   \}
+]]
+ -- run :RainbowToggleOn
+
+ -- Disable red everyting in java syntax
+vim.cmd [[
+  hi link javaIdentifier None
 ]]

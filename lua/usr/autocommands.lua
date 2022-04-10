@@ -16,6 +16,11 @@ vim.cmd [[
     autocmd BufWritePost * silent !git add %
   augroup end
 
+  augroup _java 
+    autocmd!
+    autocmd FileType,BufWinEnter java :RainbowToggleOn
+  augroup end
+
   augroup _markdown
     autocmd!
     autocmd FileType markdown setlocal wrap
