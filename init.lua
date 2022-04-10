@@ -5,10 +5,6 @@ vim.cmd [[
   augroup end
 ]]
 
-vim.cmd [[
-  autocmd BufWritePost * silent !git add %
-]]
-
 local usr = {
   "options",
   "keymaps",
@@ -23,6 +19,8 @@ local usr = {
   "bufferline",
   "luaLine",
   "colorizer",
+  "rainbow",
+  "autocommands",
 }
 
 for _, v in pairs(usr) do

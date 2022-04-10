@@ -41,15 +41,24 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
+
+  -- Dependancies of plugins
+  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "sheerun/vim-polyglot"
 
   -- File Explorer
   use 'kyazdani42/nvim-tree.lua'
+  use 'BurntSushi/ripgrep' --livegrep stuff
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
-  use 'moll/vim-bbye' --buffer bye
+  -- Buffer bye for better buffer close
+  use 'moll/vim-bbye'
 
   -- Auto pairs for "(" "[" "{"
   use "windwp/nvim-autopairs"
@@ -63,6 +72,7 @@ return packer.startup(function(use)
   use 'akinsho/bufferline.nvim'
   use 'nvim-lualine/lualine.nvim'
   use 'uiiaoo/java-syntax.vim'
+  use 'luochen1990/rainbow'
 
   -- Lsp
   use "williamboman/nvim-lsp-installer"
@@ -83,10 +93,6 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
 
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
