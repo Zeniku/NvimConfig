@@ -49,6 +49,8 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
+  use 'moll/vim-bbye' --buffer bye
+
   -- Auto pairs for "(" "[" "{"
   use "windwp/nvim-autopairs"
 
