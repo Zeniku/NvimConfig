@@ -45,7 +45,7 @@ keymap("i", "jk", "<ESC>", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
--- single line indent 
+-- single line indent
 keymap("n", "<", "<<", opts)
 keymap("n", ">", ">>", opts)
 

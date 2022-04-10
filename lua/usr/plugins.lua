@@ -50,13 +50,13 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope-media-files.nvim'
 
   -- Auto pairs for "(" "[" "{"
-  use "jiangmiao/auto-pairs"
+  use "windwp/nvim-autopairs"
 
   -- Ui stuff
   use "kyazdani42/nvim-web-devicons"
   use "ryanoasis/vim-devicons"
   use "lunarvim/darkplus.nvim"
-  use 'navarasu/onedark.nvim' 
+  use 'navarasu/onedark.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'akinsho/bufferline.nvim'
   use 'nvim-lualine/lualine.nvim'
@@ -75,6 +75,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
+
+  use 'goolord/alpha-nvim'
   -- Snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"

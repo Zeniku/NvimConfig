@@ -1,7 +1,7 @@
 vim.cmd [[
   augroup init
     autocmd!
-    autocmd BufWritePost init.lua source $MYVIMRC
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
   augroup end
 ]]
 
@@ -15,7 +15,10 @@ local usr = {
   "plugins",
   "cmp",
   "lsp",
+  "autopairs",
   "nvimtree",
+  "telescope",
+  "alpha",
   "onedark",
   "bufferline",
   "luaLine",
