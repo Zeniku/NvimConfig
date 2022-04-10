@@ -1,4 +1,3 @@
-
 vim.cmd [[
   augroup _general_settings
     autocmd!
@@ -14,11 +13,6 @@ vim.cmd [[
     autocmd FileType gitcommit setlocal spell
 
     autocmd BufWritePost * silent !git add %
-  augroup end
-
-  augroup _java 
-    autocmd!
-    autocmd FileType,BufWinEnter java :RainbowToggleOn
   augroup end
 
   augroup _markdown

@@ -70,3 +70,4 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 keymap("n", "nt", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<C-t>", ":source $MYVIMRC<CR>", opts)
+keymap("n", "nb", ":RainbowToggle<CR>", opts)
