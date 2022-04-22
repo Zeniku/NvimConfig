@@ -58,8 +58,8 @@ bufferline.setup {
     offsets = {
       {
         filetype = "NvimTree",
-        text = "Nvim Tree",
-        highlight = "WarningMsg", --it was yellow what?
+        text = " Nvim Tree",
+        highlight = "WarningMsg",
         text_align = "center",
         padding = 1
       }

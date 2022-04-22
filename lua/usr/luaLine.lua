@@ -73,7 +73,7 @@ local location = {
 		local line_ratio = current_line / total_lines
 		local index = math.ceil(line_ratio * #chars)
 
-		return str .. " " .. chars[index]
+    return str .. " " .. chars[index]
 	end
 }
 

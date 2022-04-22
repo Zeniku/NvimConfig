@@ -49,11 +49,9 @@ return packer.startup(function(use)
   -- Put this at the end after all plugins
 
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "sheerun/vim-polyglot"
 
   -- File Explorer
   use 'kyazdani42/nvim-tree.lua'
-  use 'BurntSushi/ripgrep' --livegrep stuff
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
@@ -66,13 +64,20 @@ return packer.startup(function(use)
   -- Ui stuff
   use "kyazdani42/nvim-web-devicons"
   use "ryanoasis/vim-devicons"
+  use 'norcalli/nvim-colorizer.lua'
+
+  -- Themes
   use "lunarvim/darkplus.nvim"
   use 'navarasu/onedark.nvim'
-  use 'norcalli/nvim-colorizer.lua'
+
+  --Statusline and bufferline
   use 'akinsho/bufferline.nvim'
   use 'nvim-lualine/lualine.nvim'
-  use 'uiiaoo/java-syntax.vim'
-  use 'luochen1990/rainbow'
+
+  --Syntax
+  use "sheerun/vim-polyglot"
+  use 'uiiaoo/java-syntax.vim' --Java syntax
+  use 'luochen1990/rainbow' --Rainbow {}, (), []
 
   -- Lsp
   use "williamboman/nvim-lsp-installer"
@@ -87,8 +92,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
-
   use 'goolord/alpha-nvim'
+
   -- Snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"

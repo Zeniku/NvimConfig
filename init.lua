@@ -15,11 +15,10 @@ local usr = {
   "nvimtree",
   "telescope",
   "alpha",
-  "onedark",
+  "colorscheme",
   "bufferline",
   "luaLine",
   "colorizer",
-  "luant",
   "autocommands",
 }
 
