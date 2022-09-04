@@ -68,27 +68,5 @@ nvim_tree.setup {
   },
 }
 vim.cmd [[
-  autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | Bdelete | endif
+  autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | bdelete | endif
 ]]
--- following options are the default
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "ﱣ",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "",
-    ignored = "",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  }
-}

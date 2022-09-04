@@ -4,5 +4,4 @@ if not status_ok then
 end
 
 require("usr.lsp.lsp-installer")
-require("usr.lsp.sumneko_lua")
 require("usr.lsp.handlers").setup()
