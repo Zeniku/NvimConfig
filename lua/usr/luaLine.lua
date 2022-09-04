@@ -58,7 +58,7 @@ local filename = {
 	symbols = {
 		modified = ' ',
 		readonly = ' ',
-		unnamed = '[NoName]',
+		unnamed = ' NoName',
 	},
 }
 
