@@ -35,19 +35,21 @@ M.setup = function()
 
   vim.diagnostic.config(config)
 
-  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
-  })
+  vim.lsp.handlers["textDocument/hover"] = function(...)
+    local handler = require("vim.lsp.handlers.hover")
+    handler(...)
+  end
 
-  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-    border = "rounded",
-  })
+  vim.lsp.handlers["textDocument/signatureHelp"] = function(...)
+    local handler = require("vim.lsp.handlers.signature_help")
+    handler(...)
+  end
 end
 
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
   if client.server_capabilities.document_highlight then
-    vim.api.nvim_exec(
+    vim.cmd(
       [[
       augroup lsp_document_highlight
         autocmd! * <buffer>

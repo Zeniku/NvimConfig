@@ -71,3 +71,30 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "nt", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<C-t>", ":source $MYVIMRC<CR>", opts)
 keymap("n", "nb", ":RainbowToggle<CR>", opts)
+
+
+
+-- Define a global function to toggle diagnostics
+_G.toggle_diagnostics = function()
+  if vim.g.diagnostics_enabled == nil then
+    vim.g.diagnostics_enabled = true
+  end
+
+  vim.g.diagnostics_enabled = not vim.g.diagnostics_enabled
+
+  if vim.g.diagnostics_enabled then
+    vim.diagnostic.enable()
+    print("Diagnostics enabled")
+  else
+    vim.diagnostic.enable(false)
+    print("Diagnostics disabled")
+  end
+end
+
+vim.api.nvim_set_keymap(
+  "n",
+  "of",
+  "<cmd>lua vim.diagnostic.open_float()<CR>",
+  { noremap = true, silent = true }
+)
+keymap("n", "dt", ":lua toggle_diagnostics()<CR>", { noremap = true, silent = true })

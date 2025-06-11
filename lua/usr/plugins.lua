@@ -51,7 +51,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
   -- File Explorer
-  use 'kyazdani42/nvim-tree.lua'
+  use 'nvim-tree/nvim-tree.lua'
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
@@ -62,7 +62,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs"
 
   -- Ui stuff
-  use "kyazdani42/nvim-web-devicons"
+  use "nvim-tree/nvim-web-devicons"
   use "ryanoasis/vim-devicons"
   use 'norcalli/nvim-colorizer.lua'
 
@@ -80,8 +80,9 @@ return packer.startup(function(use)
   use 'luochen1990/rainbow' --Rainbow {}, (), []
 
   -- Lsp
-  use "williamboman/nvim-lsp-installer"
   use "neovim/nvim-lspconfig"
+  use "mason-org/mason.nvim"
+  
 
   --Auto complete
   use "hrsh7th/nvim-cmp"
