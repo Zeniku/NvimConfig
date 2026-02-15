@@ -65,7 +65,6 @@ return packer.startup(function(use)
   use "nvim-tree/nvim-web-devicons"
   use "ryanoasis/vim-devicons"
   use 'norcalli/nvim-colorizer.lua'
-
   -- Themes
   use "lunarvim/darkplus.nvim"
   use 'navarasu/onedark.nvim'
